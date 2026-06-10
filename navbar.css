@@ -1,0 +1,151 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 60px;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: #006199;
+    z-index: 1000;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+    transition: transform 0.3s ease;
+}
+
+.navbar.nav-hidden {
+    transform: translateY(-100%);
+}
+
+/* Div logo */
+.logo{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    padding: 8px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 5px 0;
+    border-radius: 999px;
+    background-color: white;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Tópicos */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Links clicáveis */
+.nav-links a {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 26px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+/* Hover */
+.nav-links a:hover {
+    background-color: #12345a;
+}
+
+/* Página ativa */
+.nav-links a.ativo {
+    background-color: #38b6ff;
+    color: #fff;
+}
+/* Responsividade */
+@media (max-width: 900px) {
+    .navbar {
+        padding-right: 20px;
+        min-height: 60px;
+        height: auto;
+        flex-wrap: wrap;
+        overflow: visible;
+    }
+
+    .menu-toggle {
+        display: block;
+        width: auto;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #006199;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+        z-index: 1001;
+    }
+
+    .nav-links.menu-open {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        width: 100%;
+        height: auto;
+        padding: 16px 20px;
+        justify-content: center;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}

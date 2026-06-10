@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="atividade.css"> <!-- Folha de estilo padrão -->
+    <link rel="stylesheet" href="navbar.css"> <!-- Folha de estilo da Navbar -->
+    <link rel="icon" type="image/x-icon" href="logos\X.png"> <!-- Ícone da página -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <!-- Fonte Quicksand -->
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script> <!-- Conexão com a biblioteca do Excel -->
+    <title>Nexo - Atividade</title>
+</head>
+<body>
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+    <section class="container">
+        <div class="cabecalho-pagina">
+            <h1>Acompanhe as atualizações do Nexo</h1>
+            <p>Um espaço para publicar evoluções do site, novidades do aplicativo e decisões importantes do projeto.</p>
+        </div>
+
+        <section class="container">
+            <div class="cartao-principal">
+                <div class="topo topo-formulario">
+                    <img src="noticias\n-formulario\formulario.png" alt="Imagem principal da notícia sobre o formulário" class="capa capa-formulario">
+                </div>
+
+                <div class="conteudo">
+                    <div class="cabecalho-postagem">
+                        <span class="tag" style="background-color: #d7ffd8; color: #519b21;">22 de Maio de 2026</span>
+                        <h2 class="titulo" style="color: #2c530f;">Notícia - Contribua com o Nexo</h2>
+                        <p class="resumo">Recentemente criamos um formulário para ouvir as ideias do nosso público. Ele conta com 12 perguntas obrigatórias e alguns campos extras caso você queira compartilhar mais informações, caso ainda não seja suficiente, também é possível enviar uma mensagem via e-mail para o nexo na aba de contato.</p><br>
+                        <p class="resumo">Este formulário é anônimo, as respostas serão utilizadas para o aprendizado da equipe e também serão disponibilizadas ao público. O formulário está disponível no Google Forms pelo botão abaixo</p><br>
+                        <a class="button-acesso" href="https://docs.google.com/forms/d/12ALB8Z4lr7_5gVQgVgN12F0hVXc8O2OYYfO9l4wlbWA" target="_blank">Ir para o Formulário</a><br>
+                    </div>
+                    <div class="bloco-conteudo"></div>
+                    <div class="bloco-conteudo">
+                        <h2 class="subtitulo" style="color: #2c530f; margin-top: -10px;">Respostas do público</h2>
+                        <p>Clicando no botão abaixo, você poderá consultar as respostas de outros participantes em uma planilha do Microsoft Excel.</p><br>
+                        <!--Atualizar dados substituindo o arquivo Nexo Estático (Necessário remover o powe rquery antes de enviar)-->
+                        <a class="button-acesso" id="baixar-excel" href="noticias\n-formulario\Nexo Estático.xlsx" download="Respostas do Nexo">Baixar respostas</a><br><br>
+                        <p>A atualização das respostas pode levar alguns dias. É necessário baixar o arquivo novamente para visualizar dados mais recentes.</p>
+                        <p>Ultima atualização: 10/06/2026</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="cartao-principal">
+            <div class="topo">
+                <img src="noticias\it2\capa.png" alt="Capa da versão IT2" class="capa">
+            </div>
+
+            <div class="conteudo">
+                <div class="cabecalho-postagem">
+                    <span class="tag">13 de Maio de 2026</span>
+                    <h2 class="titulo">IT2 - Atualização responsiva</h2>
+                    <p class="resumo">Esta atualização traz diversas melhorias para o site, com foco especial na experiência em celulares e tablets.</p>
+                </div>
+
+                <div class="bloco-conteudo">
+                    <img src="noticias\it2\responsivo.gif" alt="Gif demonstrando a responsividade do site" class="imagem imagem-ampla">
+                    <h2 class="subtitulo">Responsividade</h2>
+                    <p>O site agora está totalmente adaptado para dispositivos móveis, podendo ser exibido corretamente em resoluções a partir de 260 pixels de largura, superando a média de 320 pixels utilizada por outros sites. Antes, era necessário no mínimo 1100 pixels de largura para uma exibição adequada.</p>
+                </div>
+
+                <div class="bloco-conteudo">
+                    <img src="noticias\it2\navbar.gif" alt="Nova barra de navegação" class="imagem imagem-media">
+                    <h2 class="subtitulo">Nova Barra de Navegação</h2>
+                    <p>A barra de navegação foi redesenhada para dispositivos móveis. Agora, ao clicar no ícone de menu, um painel vertical é exibido, facilitando o acesso às demais abas. Além disso, a barra permanece fixa no topo da tela durante a rolagem da página.</p>
+                </div>
+
+                <div class="bloco-conteudo">
+                    <img src="noticias\it2\atividade.png" alt="Imagem da aba de atividade" class="imagem imagem-ampla">
+                    <h2 class="subtitulo">Atividade</h2>
+                    <p>A aba “Blog”, que anteriormente era apenas demonstrativa, foi substituída por “Atividade”. Nela serão publicadas atualizações do site e do futuro aplicativo, além de outros conteúdos relacionados ao Nexo.</p>
+                </div>
+
+                <div class="bloco-conteudo destaque-lista">
+                    <h2 class="subtitulo">Outras Mudanças</h2>
+                    <ul>
+                        <li>Atualização do layout da aba “Contato”</li>
+                        <li>Ativação do envio de mensagens</li>
+                        <li>Centralização dos cartões de produtos</li>
+                        <li>Correção de proporções nas demais abas</li>
+                        <li>Substituição dos ícones genéricos do site por ícones autorais</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="cartao-principal">
+            <div class="topo">
+                <img src="logos\nexo.png" alt="Capa da versão IT1" class="capa" style="width: 80%;">
+            </div>
+
+            <div class="conteudo">
+                <div class="cabecalho-postagem">
+                    <span class="tag">17 de Abril de 2026</span>
+                    <h2 class="titulo">IT1 - Lançamento do site de Informações</h2>
+                    <p class="resumo">Publicação da primeira versão do site institucional do Nexo, criada para apresentar a empresa, seus produtos e a proposta do projeto.</p>
+                </div>
+
+                <div class="bloco-conteudo">
+                    <h2 class="subtitulo">O que é este site</h2>
+                    <p>O site de informações do Nexo foi desenvolvido para apresentar a empresa, destacar seus produtos e reunir, as principais informações sobre o projeto em um só lugar.</p>
+                </div>
+
+                <div class="bloco-conteudo destaque-lista">
+                    <img src="noticias\it1\abas.png" alt="Abas do Nexo" width="100%" class="imagem">
+                    <h2 class="subtitulo">Abas</h2>
+                    <p>Cada aba foi pensada para cumprir uma função específica:</p>
+                    <ul>
+                        <li><b>Início:</b> apresenta as principais funcionalidades do Nexo</li>
+                        <li><b>Sobre Nós:</b> reúne a missão, a visão e os valores da empresa</li>
+                        <li><b>Produtos:</b> mostra as soluções do Nexo e o perfil de usuário atendido por cada uma</li>
+                        <li><b>Blog:</b> <i>inoperante</i>, seria destinado à publicação de notícias e novidades do Nexo</li>
+                        <li><b>Contato:</b> <i>inoperante</i>, foi criado para facilitar o envio de mensagens e o contato com a equipe</li>
+                    </ul>
+                </div>
+
+                <div class="bloco-conteudo">
+                    <h2 class="subtitulo">Futuras atividades</h2>
+                    <p>Fiquem atentos: em breve teremos mais publicações sobre o desenvolvimento do Nexo, com atualizações, enquetes e notícias em destaque.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    text-align: justify;
+}
+
+#sobre {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 180px;
+}
+/* Quadrado azul - Dashboard */
+.dashboard {
+    max-width: 640px;
+    height: 430px;
+    margin-left: 20px;
+    padding: 0 0 30px 90px;
+    background: #006199;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.dash-titulo {
+    display: inline-block;
+    margin: 90px 0 10px;
+    padding: 20px 30px;
+    color: #fff;
+    font-size: 30px;
+    border-left: 3px solid #fff;
+}
+
+.dash-texto {
+    color: #fff;
+}
+/* Texto ao lado */
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    max-width: 770px;
+    padding-right: 70px;
+}
+
+.titulo {
+    padding: 30px 80px;
+    font-size: 37px;
+}
+
+.titulo p,
+.subtitulo,
+.carta h3 {
+    color: #006199;
+}
+
+.indice {
+    width: 95%;
+    padding: 10px 80px;
+}
+
+.texto {
+    color: #73857f;
+    font-size: 17px;
+}
+/* Container de visão e valores */
+.container {
+    padding: 60px 80px;
+}
+
+.subtitulo {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 10px 0 40px;
+    font-size: 42px;
+}
+/* Cartas */
+.conteudo {
+    display: flex;
+    gap: 40px;
+}
+
+.esquerda {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 45%;
+}
+
+.direita {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 55%;
+}
+
+.carta {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+}
+
+.carta h3 {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.carta p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.destaque {
+    padding-left: 16px;
+    border-left: 4px solid #006199;
+}
+/* Responsividade no celular */
+@media (max-width: 1100px) {
+    #sobre {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        padding: 24px 16px 0;
+    }
+
+    .dashboard,
+    .info {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 640px;
+    }
+
+    .dashboard {
+        height: auto;
+        margin-left: 0;
+        padding: 24px 20px;
+    }
+
+    .dash-titulo {
+        margin-top: 0;
+        padding: 18px 20px;
+        font-size: 24px;
+    }
+
+    .info {
+        padding-right: 0;
+    }
+
+    .titulo {
+        padding: 0 4px;
+        font-size: 30px;
+    }
+
+    .indice {
+        width: 100%;
+        padding: 10px 4px 0;
+    }
+
+    .container {
+        padding: 40px 16px;
+    }
+
+    h1 {
+        margin-bottom: 28px;
+        font-size: 34px;
+    }
+
+    .conteudo {
+        flex-direction: column;
+    }
+
+    .esquerda,
+    .direita {
+        width: 100%;
+    }
+}
+
+@media (max-width: 520px) {
+    .dashboard {
+        padding: 22px 16px;
+    }
+
+    .dash-titulo {
+        padding: 14px 16px;
+        font-size: 20px;
+    }
+
+    .texto,
+    .carta p {
+        font-size: 15px;
+    }
+
+    .direita {
+        grid-template-columns: 1fr;
+    }
+}

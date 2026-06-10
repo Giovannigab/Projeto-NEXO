@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contato.css"> <!-- Folha de estilo padrão -->
+    <link rel="stylesheet" href="navbar.css"> <!-- Folha de estilo da Navbar -->
+    <link rel="icon" type="image/x-icon" href="logos\X.png"> <!-- Ícone da página -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <!-- Fonte Quicksand -->
+    <title>Nexo - Contato</title>
+</head>
+<body>
+    <div id="navbar"></div> <!-- Div para a Navbar -->
+    <script src="navbar.js"></script> <!-- Script da Navbar -->
+
+    <div class="container">
+        <div class="formulario">
+            <h2>Envie uma Mensagem</h2>
+            <form id="contato-form">
+                <!-- Linha 1 -->
+                <div class="linha">
+                    <div class="campo">
+                        <label for="nome">Nome</label>
+                        <input id="nome" type="text" name="nome" placeholder="Seu nome" required>
+                    </div>
+                    <div class="campo">
+                        <label for="email">E-Mail (Opcional)</label>
+                        <input id="email" type="email" name="email" placeholder="seu@email.com">
+                    </div>
+                </div>
+
+                <!-- Linha 2 -->
+                <div class="linha">
+                    <div class="campo">
+                        <label for="perfil">Perfil</label>
+                        <select id="perfil" name="perfil" required>
+                            <option value="" selected disabled>-- Selecione --</option>
+                            <option value="Cliente">Cliente</option>
+                            <option value="Prestador de Serviços">Prestador de Serviços</option>
+                            <option value="Empresa/Associação">Empresa / Pessoa Jurídica / Associação</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="cidade">Cidade (Opcional)</label>
+                        <input id="cidade" type="text" name="cidade" placeholder="Sua Cidade">
+                    </div>
+                </div>
+
+                <!-- Textarea -->
+                <h2>Como podemos ajudar?</h2>
+                <textarea id="duvida" name="duvida" placeholder="..." required></textarea>
+
+                <!-- Botão de envio -->
+                <button type="submit">Enviar Mensagem</button>
+    	        <p id="form-status" class="form-status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+    <script src="contato.js"></script> <!-- Script para o envio do formulário -->
+</body>
+</html>

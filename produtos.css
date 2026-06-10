@@ -1,0 +1,203 @@
+h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.titulo {
+    margin-left: 30px;
+    padding: 30px 20px;
+}
+
+.sub-titulo {
+    margin-bottom: 10px;
+    color: #006199;
+    font-size: 18px;
+}
+
+.titulo h2 {
+    margin-bottom: 10px;
+    font-size: 37px;
+}
+
+.titulo-txt {
+    color: rgb(171, 163, 163);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+}
+/* Cartão */
+.cartao {
+    flex: 0 0 320px;
+    width: 320px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+}
+
+.topo-cartao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background: #d4efff;
+}
+
+.icon {
+    font-size: 40px;
+}
+
+.conteudo {
+    padding: 20px;
+}
+
+.tag {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    color: #006199;
+    font-size: 12px;
+    background: #d4efff;
+    border-radius: 20px;
+}
+
+.conteudo h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.conteudo p,
+.conteudo ul li {
+    font-size: 14px;
+}
+
+.conteudo p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.conteudo ul {
+    list-style: none;
+}
+
+.conteudo ul li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 18px;
+}
+/* Bolinha azul do cartão */
+.conteudo ul li::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background: #006199;
+    border-radius: 50%;
+}
+/* Quadrado azul - Plano */
+.plano {
+    box-sizing: border-box;
+    width: clamp(200px, 70%, 750px);
+    height: clamp(250px, 500px);
+    margin: 0 auto 40px;
+    padding: 50px 40px;
+    text-align: center;
+    background: #006199;
+    border-radius: 16px;
+}
+
+.plano-titulo {
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.plano-texto {
+    margin-top: 20px;
+    color: #ffffff;
+    font-weight: bolder;
+}
+/* Botão contato */
+.button {
+    display: inline-block;
+    width: fit-content;
+    padding: 20px 25px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.button {
+    margin-top: 25px;
+    color: #006199;
+    background: #fff;
+    border: 2px solid;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+/* Justificar texto */
+body {
+    text-align: justify;
+}
+
+.button:hover {
+    background-color: #a3a3a3;
+}
+/* Responsividade no celular */
+@media (max-width: 768px) {
+    .titulo {
+        margin-left: 0;
+        padding: 24px 16px;
+    }
+
+    .titulo h2 {
+        font-size: 30px;
+    }
+
+    .container {
+        gap: 16px;
+        padding: 24px 16px;
+    }
+
+    .cartao {
+        flex-basis: calc((100% - 16px) / 2);
+        width: calc((100% - 16px) / 2);
+    }
+
+    .plano {
+        width: calc(100% - 32px);
+        padding: 40px 24px;
+    }
+
+    .plano-titulo {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 520px) {
+    .cartao {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .plano-titulo {
+        font-size: 30px;
+    }
+}
