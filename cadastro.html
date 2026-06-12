@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css"> <!-- Folha de estilo da página -->
+    <link rel="stylesheet" href="navbar.css"> <!-- Folha de estilo da Navbar -->
+    <link rel="icon" type="image/x-icon" href="logos\X.png"> <!-- Ícone da página -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <!-- Fonte Quicksand -->
+    <title>Nexo - Cadastro</title>
+</head>
+<body>
+    <div id="navbar"></div> <!-- Div para a Navbar -->
+    <script src="navbar.js"></script> <!-- Script da Navbar -->
+
+    <section id="cadastro" class="section">
+        <div class="cadastro-container">
+
+            <!-- Painel esquerdo: escolha do tipo de conta -->
+            <div class="tipo-conta">
+                <div class="boas-vindas">
+                    <h1>Bem-vindo à Nexo</h1>
+                </div>
+
+                <h2>Como você quer se cadastrar?</h2>
+                <p class="tipo-subtitulo">Escolha o tipo de conta para continuar</p>
+
+                <div class="opcoes-conta">
+                    <button type="button" class="opcao-conta ativo" data-tipo="cliente" onclick="selecionarTipo('cliente')">
+                        <div class="opcao-icone">
+                            <img src="icones\cliente.png" alt="Cliente" width="40px">
+                        </div>
+                        <div class="opcao-txt">
+                            <h4>Cliente / Contratante</h4>
+                            <p>Quero contratar serviços de prestadores verificados na plataforma.</p>
+                        </div>
+                    </button>
+
+                    <button type="button" class="opcao-conta" data-tipo="prestador" onclick="selecionarTipo('prestador')">
+                        <div class="opcao-icone">
+                            <img src="icones\engrenagem.png" alt="Prestador" width="40px">
+                        </div>
+                        <div class="opcao-txt">
+                            <h4>Prestador de serviço</h4>
+                            <p>Quero oferecer meus serviços e ser encontrado por contratantes.</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Painel direito: formulário -->
+            <div class="cadastro-card">
+
+                <!-- Formulário Cliente -->
+                <form id="form-cliente" action="#" method="post" class="form-cadastro ativo">
+                    <h1>Crie sua conta</h1>
+                    <p class="subtitulo">Junte-se à Nexo e conecte-se a quem realmente entrega resultados</p>
+
+                    <div class="campo">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email-cliente">E-mail</label>
+                        <input type="email" id="email-cliente" name="email" placeholder="seuemail@exemplo.com" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="senha-cliente">Senha</label>
+                        <input type="password" id="senha-cliente" name="senha" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="confirmar-senha-cliente">Confirmar senha</label>
+                        <input type="password" id="confirmar-senha-cliente" name="confirmar-senha" placeholder="••••••••" required>
+                    </div>
+
+                    <button type="submit" class="button-acesso btn-full">Criar conta</button>
+
+                    <div class="divisor">ou continue com</div>
+
+                    <a href="#" class="botao-google">
+                        <svg viewBox="0 0 48 48" width="20" height="20">
+                            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+                            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+                            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+                            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+                        </svg>
+                        Continuar com Google
+                    </a>
+
+                    <p class="login-link">Já tem uma conta? <a href="login.html">Entrar</a></p>
+                </form>
+
+                <!-- Formulário Prestador -->
+                <form id="form-prestador" action="#" method="post" class="form-cadastro">
+                    <h1>Cadastro de prestador</h1>
+                    <p class="subtitulo">Cadastre sua empresa ou serviço e comece a receber oportunidades reais</p>
+
+                    <div class="campo">
+                        <label for="nome-responsavel">Nome do responsável</label>
+                        <input type="text" id="nome-responsavel" name="nome-responsavel" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="nome-empresa">Nome da empresa / serviço</label>
+                        <input type="text" id="nome-empresa" name="nome-empresa" placeholder="Digite o nome da empresa" required>
+                    </div>
+
+                    <div class="linha-campos">
+                        <div class="campo">
+                            <label for="cnpj">CNPJ</label>
+                            <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="cep">CEP</label>
+                            <input type="text" id="cep" name="cep" placeholder="00000-000" required>
+                        </div>
+                    </div>
+
+                    <div class="linha-campos">
+                        <div class="campo campo-grande">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" name="cidade" placeholder="Cidade" required>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="categoria">Categoria de serviço</label>
+                        <select id="categoria" name="categoria" required>
+                            <option value="" disabled selected>Selecione uma categoria</option>
+                            <option value="construcao">Construção e Reforma</option>
+                            <option value="limpeza">Limpeza</option>
+                            <option value="tecnologia">Tecnologia</option>
+                            <option value="consultoria">Consultoria</option>
+                            <option value="saude">Saúde e Bem-estar</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email-prestador">E-mail</label>
+                        <input type="email" id="email-prestador" name="email" placeholder="seuemail@exemplo.com" required>
+                    </div>
+
+                    <div class="linha-campos">
+                        <div class="campo">
+                            <label for="senha-prestador">Senha</label>
+                            <input type="password" id="senha-prestador" name="senha" placeholder="••••••••" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="confirmar-senha-prestador">Confirmar senha</label>
+                            <input type="password" id="confirmar-senha-prestador" name="confirmar-senha" placeholder="••••••••" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="button-acesso btn-full">Cadastrar como prestador</button>
+
+                    <div class="divisor">ou continue com</div>
+
+                    <a href="#" class="botao-google">
+                        <svg viewBox="0 0 48 48" width="20" height="20">
+                            <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+                            <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+                            <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+                            <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+                        </svg>
+                        Continuar com Google
+                    </a>
+
+                    <p class="login-link">Já tem uma conta? <a href="login.html">Entrar</a></p>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function selecionarTipo(tipo) {
+            // Atualiza botões de seleção
+            document.querySelectorAll('.opcao-conta').forEach(function (btn) {
+                btn.classList.toggle('ativo', btn.dataset.tipo === tipo);
+            });
+
+            // Atualiza formulário exibido
+            document.querySelectorAll('.form-cadastro').forEach(function (form) {
+                form.classList.remove('ativo');
+            });
+            document.getElementById('form-' + tipo).classList.add('ativo');
+        }
+    </script>
+
+</body>
+</html>
