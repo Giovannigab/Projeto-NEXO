@@ -1,0 +1,145 @@
+/* Arquivo global */
+/* Cores do Nexo */
+:root {
+	--cor-primaria: #006199;
+	--cor-primaria-clara: #d4efff;
+	--cor-primaria-hover: #12345a;
+	--cor-secundaria: #3c9600;
+	--cor-secundaria-clara: #d7ffd8;
+	--cor-secundaria-hover: #2c530f;
+	--cor-primaria-texto: #163047;
+	--cor-secundaria-texto: #223f0c;
+	--cor-texto-claro: #6b6b6b;
+	--cor-aprovado: #006199;
+	--cor-negado: #b42318;
+	--cor-fundo: #f5f5f5;
+	--cor-cartao: #ffffff;
+	--sombra-cartao: 0 4px 12px rgba(0, 0, 0, 0.1);
+	--borda-suave: rgba(0, 97, 153, 0.1);
+	--raio-cartao: 16px;
+}
+
+/* Padronização do Corpo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    max-width: 1500px;
+    margin: 0 auto;
+    background-color: var(--cor-fundo);
+    color: var(--cor-primaria-texto);
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Padronização da tipografia */
+h1 {
+    color: var(--cor-primaria-texto);
+    font-size: 42px;
+    line-height: 1.15;
+}
+.subtitulo {
+    margin-bottom: 10px;
+    color: var(--cor-primaria);
+    font-size: 15px;
+    letter-spacing: 2px;
+	font-weight: bold;
+}
+.texto-suave {
+    color: var(--cor-texto-claro);
+    line-height: 1.5;
+}
+
+/* Padronização dos cartões */
+.cartao {
+    background: var(--cor-cartao);
+    border: 1px solid var(--borda-suave);
+    border-radius: var(--raio-cartao);
+    box-shadow: var(--sombra-cartao);
+}
+.cartao h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.cartao p {
+    color: var(--cor-texto-claro);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Padronização de botões */
+.botao-primario, .botao-secundario, .botao-branco {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 20px 25px;
+	width: fit-content;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: 0.3s;
+	cursor: pointer;
+}
+.botao-primario:disabled, .botao-secundario:disabled, .botao-branco:disabled {
+	opacity: 0.7;
+	cursor: wait;
+}
+.botao-primario {
+    color: #ffffff;
+    background: var(--cor-primaria);
+}
+.botao-primario:hover {
+    background-color: var(--cor-primaria-hover);
+}
+.botao-secundario {
+	color: #ffffff;
+    background: var(--cor-secundaria);
+}
+.botao-secundario:hover {
+    background-color: var(--cor-secundaria-hover);
+}
+.botao-branco {
+	color: var(--cor-primaria);
+    background: #ffffff;
+    border: 2px solid;
+}
+.botao-branco:hover {
+	background-color: #c5c5c5;
+}
+
+/* Padronização do formulário */
+input, select, textarea {
+	width: 100%;
+	padding: 10px;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	background-color: #ffffff;
+}
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(0, 97, 153, 0.15);
+}
+
+@media (max-width: 1200px) {
+	h1 {
+		font-size: 34px;
+	}
+	.subtitulo {
+		font-size: 12px;
+	}
+}
+@media (max-width: 350px) {
+	h1 {
+        font-size: 25px;
+    }
+}

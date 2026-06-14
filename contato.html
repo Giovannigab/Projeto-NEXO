@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="contato.css"> <!-- Folha de estilo padrão -->
-    <link rel="stylesheet" href="navbar.css"> <!-- Folha de estilo da Navbar -->
+    <link rel="stylesheet" href="auxiliares/global.css"> <!-- Folha de estilo global -->
+    <link rel="stylesheet" href="contato.css"> <!-- Folha de estilo da página -->
+    <link rel="stylesheet" href="auxiliares/navbar.css"> <!-- Folha de estilo da Navbar -->
     <link rel="icon" type="image/x-icon" href="logos\X.png"> <!-- Ícone da página -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <!-- Fonte Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"> <!-- Fonte Inter -->
     <title>Nexo - Contato</title>
 </head>
 <body>
     <div id="navbar"></div> <!-- Div para a Navbar -->
-    <script src="navbar.js"></script> <!-- Script da Navbar -->
+    <script src="auxiliares/navbar.js"></script> <!-- Script da Navbar -->
 
     <div class="container">
         <div class="formulario">
@@ -51,7 +54,7 @@
                 <textarea id="duvida" name="duvida" placeholder="..." required></textarea>
 
                 <!-- Botão de envio -->
-                <button type="submit">Enviar Mensagem</button>
+                <button type="submit" class="botao-primario">Enviar Mensagem</button>
     	        <p id="form-status" class="form-status" aria-live="polite"></p>
             </form>
         </div>

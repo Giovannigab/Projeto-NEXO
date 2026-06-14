@@ -1,22 +1,11 @@
-h1, h2, h3, h4, h5, h6 {
-    text-align: left;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
-    text-align: justify;
-}
-
 /* Slogan */
 .info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-    padding: 50px;
+    padding: 70px;
+    padding-top: 20px;
 }
 
 .titulo-info {
@@ -25,8 +14,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .titulo-info h1 {
     margin-bottom: 15px;
-    font-size: 74px;
-    text-align: left;
+    font-size: 60px;
 }
 
 .titulo-info p {
@@ -38,9 +26,9 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     width: fit-content;
     padding: 4px 10px;
-    color: #fff;
+    color: #ffffff;
     font-size: 14px;
-    background: #006199;
+    background: var(--cor-primaria);
     border-radius: 6px;
 }
 
@@ -50,157 +38,76 @@ h1, h2, h3, h4, h5, h6 {
     gap: 10px;
     width: 50%;
     padding: 20px;
-    background: #d4efff;
+    background: var(--cor-primaria-clara);
     border-radius: 10px;
     backdrop-filter: blur(10px);
+    min-width: 200px;
 }
 /* Itens do Dashboard */
-.item {
+.dashboard-itens .cartao {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
     padding: 20px;
-    background: #fff;
-    border-radius: 20px;
-    transition: 0.3s;
 }
-/* Este trecho também abrange os cartões */
-.item .icone,
-.carta .icone {
+
+/* Ícones dos cartões e do dashboard */
+.cartao .icone {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 75px;
     height: 75px;
-    background: #d4efff;
-}
-
-.item .icone {
-    flex-shrink: 0;
+    background: var(--cor-primaria-clara);
     padding: 15px;
     font-size: 28px;
     border-radius: 10px;
+    flex-shrink: 0;
 }
 
-.item-txt {
+.conteudo {
     display: flex;
     flex-direction: column;
 }
 
-.item-txt h4 {
-    font-size: 20px;
-}
-
-.item-txt p {
-    color: grey;
-    font-size: 15px;
-}
-/* Botões */
-.button-item {
-    margin: 0 0 40px 50px;
-}
-
-.button,
-.button-acesso {
-    display: inline-block;
-    width: fit-content;
-    padding: 20px 25px;
-    font-size: 14px;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: 0.3s;
-}
-
-.button {
-    color: #006199;
-    background: #fff;
-    border: 2px solid;
-}
-
-.button-acesso {
-    color: #fff;
-    background: #006199;
-}
-
-.button a,
-.button-acesso a {
-    color: inherit;
-    text-decoration: none;
-}
-.button:hover {
-    background-color: #a3a3a3;
-}
-.button-acesso:hover {
-    background-color: #12345a;
-    cursor: not-allowed;
-}
-
-/* Cartas */
+/* Cartoes */
 .features {
     min-width: 0;
     padding: 60px 80px;
-    background: #f5f5f5;
+    background: #ebebeb;
 }
 
-.subtitulo {
-    margin-bottom: 10px;
-    color: #006199;
-    font-size: 15px;
-    letter-spacing: 2px;
-}
-
-.titulo {
-    margin-bottom: 40px;
-    color: #111;
-    font-size: 42px;
-}
-
-.cartas {
+.cartoes {
+    margin-top: 42px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
-
-.carta {
+/* Cartao individual */
+.cartao {
     padding: 25px;
-    background: #e9e9e9;
-    border-radius: 15px;
-    transition: 0.3s;
 }
 
-.carta .icone {
+.cartoes .cartao .icone {
     margin-bottom: 15px;
     font-size: 22px;
     border-radius: 12px;
 }
 
-.carta h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
+/* Botões */
+.botoes {
+    padding: 70px;
+    padding-top: 0px;
 }
 
-.carta p {
-    color: #555;
-    font-size: 14px;
-    line-height: 1.5;
-}
 /* Responsividade no celular */
-@media (max-width: 1024px) {
-    .titulo-info h1 {
-        font-size: 56px;
-    }
-
-    .dashboard-itens {
-        width: 100%;
-        max-width: 560px;
-    }
-
-    .cartas {
+@media (max-width: 1500px) {
+    .cartoes {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .info {
         flex-direction: column;
         align-items: stretch;
@@ -221,39 +128,31 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .dashboard-itens {
+        max-width: 1000px;
         width: 100%;
         padding: 16px;
     }
 
-    .item {
-        gap: 20px;
-        padding: 16px;
-    }
-
-    .button-item {
+    .botoes {
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
-        margin: 0 20px 32px;
+        padding: 20px;
+        margin-bottom: 30px;
     }
 
     .features {
         padding: 40px 20px;
     }
 
-    .titulo {
-        margin-bottom: 28px;
-        font-size: 34px;
-    }
-
-    .cartas {
+    .cartoes {
         gap: 16px;
+        margin-top: 28px;
     }
 }
 
-@media (max-width: 520px) {
-    .button,
-    .button-acesso {
+@media (max-width: 570px) {
+    .botao-primario, .botao-branco {
         width: 100%;
         text-align: center;
     }
@@ -263,22 +162,34 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .titulo-info h1 {
-        font-size: 34px;
+        font-size: 38px;
     }
-
-    .dashboard-itens,
-    .item,
-    .button-item {
+    
+    .dashboard-itens, .botoes {
         min-width: 0;
     }
 
-    .item {
-        flex-direction: column;
-        align-items: flex-start;
+    .cartoes {
+        grid-template-columns: 1fr;
+    }
+    .cartoes .cartao {
+        display: flex;
+        align-items: center;
         gap: 14px;
     }
+    .cartao .icone {
+        margin-bottom: 0;
+    }
+}
 
-    .cartas {
-        grid-template-columns: 1fr;
+@media (max-width: 360px) {
+    .titulo-info h1 {
+        font-size: 35px;
+    }
+	.cartoes .cartao, .dashboard-itens .cartao {
+        display: grid;
+		grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        gap: 5px;
     }
 }

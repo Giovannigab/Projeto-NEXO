@@ -1,27 +1,15 @@
-h1, h2, h3, h4, h5, h6 {
-    text-align: left;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Quicksand', sans-serif;
-    text-align: justify;
-}
-
 #sobre {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 180px;
+    gap: 0px;
 }
 /* Quadrado azul - Dashboard */
 .dashboard {
-    max-width: 640px;
+    max-width: 600px;
     height: 430px;
-    margin-left: 20px;
     padding: 0 0 30px 90px;
-    background: #006199;
+    background: var(--cor-primaria);
     border-radius: 10px;
     margin-top: 20px;
     margin-left: 80px;
@@ -31,33 +19,34 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     margin: 90px 0 10px;
     padding: 20px 30px;
-    color: #fff;
+    color: #ffffff;
     font-size: 30px;
-    border-left: 3px solid #fff;
+    border-left: 3px solid #ffffff;
 }
 
 .dash-texto {
-    color: #fff;
+    color: #ffffff;
 }
 /* Texto ao lado */
 .info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 50%;
-    max-width: 770px;
-    padding-right: 70px;
+    width: 790px;
+    padding-right: 0px;
+}
+.historia {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: var(--cor-primaria);
 }
 
 .titulo {
     padding: 30px 80px;
-    font-size: 37px;
 }
 
-.titulo p,
-.subtitulo,
-.carta h3 {
-    color: #006199;
+.cartao h3 {
+    color: var(--cor-primaria);
 }
 
 .indice {
@@ -66,7 +55,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .texto {
-    color: #73857f;
     font-size: 17px;
 }
 /* Container de visão e valores */
@@ -74,18 +62,9 @@ h1, h2, h3, h4, h5, h6 {
     padding: 60px 80px;
 }
 
-.subtitulo {
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-h1 {
-    margin: 10px 0 40px;
-    font-size: 42px;
-}
-/* Cartas */
+/* Cartões */
 .conteudo {
+    margin-top: 40px;
     display: flex;
     gap: 40px;
 }
@@ -104,39 +83,26 @@ h1 {
     width: 55%;
 }
 
-.carta {
+.cartao {
     padding: 20px;
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
 }
 
-.carta h3 {
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-.carta p {
-    color: #555;
-    font-size: 14px;
-    line-height: 1.5;
+.esquerda .cartao {
+    flex: 1;
 }
 
 .destaque {
     padding-left: 16px;
-    border-left: 4px solid #006199;
+    border-left: 4px solid var(--cor-primaria);
 }
-/* Responsividade no celular */
-@media (max-width: 1100px) {
+
+@media (max-width: 1200px) {
     #sobre {
-        flex-direction: column;
-        align-items: center;
         gap: 32px;
         padding: 24px 16px 0;
     }
 
-    .dashboard,
-    .info {
+    .dashboard, .info {
         box-sizing: border-box;
         width: 100%;
         max-width: 640px;
@@ -149,9 +115,15 @@ h1 {
     }
 
     .dash-titulo {
-        margin-top: 0;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
         padding: 18px 20px;
         font-size: 24px;
+    }
+    .dash-texto {
+        margin-bottom: 20px;
+        margin-left: 20px;
     }
 
     .info {
@@ -160,7 +132,6 @@ h1 {
 
     .titulo {
         padding: 0 4px;
-        font-size: 30px;
     }
 
     .indice {
@@ -172,22 +143,21 @@ h1 {
         padding: 40px 16px;
     }
 
-    h1 {
-        margin-bottom: 28px;
-        font-size: 34px;
-    }
-
     .conteudo {
         flex-direction: column;
+        margin-top: 28px;
     }
 
-    .esquerda,
-    .direita {
+    .esquerda, .direita {
         width: 100%;
     }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 720px) {
+    #sobre{
+        flex-direction: column;
+        align-items: center;
+    }
     .dashboard {
         padding: 22px 16px;
     }
@@ -197,12 +167,19 @@ h1 {
         font-size: 20px;
     }
 
-    .texto,
-    .carta p {
+    .texto, .cartao p {
         font-size: 15px;
     }
 
     .direita {
         grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 300px) {
+    h3 {
+        font-size: 15px;
+    }
+    .dash-texto {
+        font-size: 12px;
     }
 }
