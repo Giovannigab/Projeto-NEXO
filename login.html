@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexo - Login</title>
+
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+
+  <main class="login-container">
+
+<!-- LADO ESQUERDO -->
+<section class="nexo-left">
+  <div>
+    <div class="logo">NE<span>XO</span></div>
+
+    <p class="tagline">
+      Conecte-se a quem realmente entrega resultados.
+    </p>
+
+    <div class="card-list">
+      <div class="mini-card">
+        <div class="mini-card-icon">
+          <i class="ti ti-tool"></i>
+        </div>
+        <div>
+          <div class="mini-card-label">Prestador</div>
+          <div class="mini-card-desc">
+            Identidade e experiência validadas
+          </div>
+        </div>
+      </div>
+
+      <div class="mini-card">
+        <div class="mini-card-icon">
+          <i class="ti ti-building"></i>
+        </div>
+        <div>
+          <div class="mini-card-label">Contratante</div>
+          <div class="mini-card-desc">
+            Oportunidades reais e transparentes
+          </div>
+        </div>
+      </div>
+
+      <div class="mini-card">
+        <div class="mini-card-icon">
+          <i class="ti ti-users"></i>
+        </div>
+        <div>
+          <div class="mini-card-label">Cliente</div>
+          <div class="mini-card-desc">
+            Pagamentos protegidos e suporte
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer-copy">
+    © 2026 Nexo. Todos os direitos reservados.
+  </p>
+</section>
+
+<!-- LADO DIREITO -->
+<section class="nexo-right">
+
+  <h1 class="form-title">Bem-vindo de volta</h1>
+
+  <p class="form-sub">
+    Acesse sua conta para continuar
+  </p>
+
+  <div class="field">
+    <label for="email">E-mail</label>
+    <input
+      type="email"
+      id="email"
+      placeholder="seu@email.com"
+    >
+  </div>
+
+  <div class="field">
+    <div class="pass-row">
+      <label for="senha">Senha</label>
+      <a class="forgot" href="#">
+        Esqueci minha senha
+      </a>
+    </div>
+
+    <input
+      type="password"
+      id="senha"
+      placeholder="••••••••"
+    >
+  </div>
+
+  <button
+    class="btn-primary"
+    onclick="window.location.href='dashboard.html'">
+    Entrar
+  </button>
+
+  <div class="divider">
+    <div class="divider-line"></div>
+    <span class="divider-text">ou</span>
+    <div class="divider-line"></div>
+  </div>
+
+  <p class="register-row">
+    Não tem uma conta?
+    <a href="cadastro.html">Cadastre-se</a>
+  </p>
+
+</section>
+
+  </main>
+
+</body>
+</html>
