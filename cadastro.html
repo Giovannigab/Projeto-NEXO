@@ -145,6 +145,24 @@
                         </select>
                     </div>
 
+                    <!-- Campos que existem de fato na tabela Prestador -->
+                    <div class="campo">
+                        <label for="descricao-prestador">Descrição do serviço</label>
+                        <textarea id="descricao-prestador" name="descricao" rows="3" placeholder="Conte um pouco sobre os serviços que você oferece" required></textarea>
+                    </div>
+
+                    <div class="linha-campos">
+                        <div class="campo">
+                            <label for="preco-hora">Preço por hora (R$)</label>
+                            <input type="number" id="preco-hora" name="precoHora" min="0" step="0.01" placeholder="0,00" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="experiencia">Experiência (anos)</label>
+                            <input type="number" id="experiencia" name="experiencia" min="0" placeholder="0" required>
+                        </div>
+                    </div>
+
                     <div class="campo">
                         <label for="email-prestador">E-mail</label>
                         <input type="email" id="email-prestador" name="email" placeholder="seuemail@exemplo.com" required>
@@ -162,7 +180,7 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="button-acesso btn-full">Cadastrar como prestador</button>
+                    <button type="submit" class="button-acesso btn-full" id="cadastroPrestador">Cadastrar como prestador</button>
 
                     <div class="divisor">ou continue com</div>
 
@@ -198,5 +216,6 @@
         }
     </script>
 
+<script src="cadastro.js"></script>
 </body>
 </html>
