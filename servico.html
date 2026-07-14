@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexo — Cadastrar serviço</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css" />
+  <link rel="stylesheet" href="servico.css">
+  
+</head>
+<body>
+
+
+<div class="page-header">
+  <div class="back" onclick="history.back()">
+    <i class="ti ti-arrow-left" style="font-size:14px"></i> Meus serviços
+  </div>
+  <h1>Cadastrar serviço</h1>
+  <p>Preencha as informações abaixo para publicar seu serviço na plataforma.</p>
+</div>
+
+<div class="wrapper">
+
+  <!-- SOBRE O SERVIÇO -->
+  <div class="card">
+    <div class="card-title"><i class="ti ti-file-description"></i> Sobre o serviço</div>
+
+    <div class="field">
+      <label>Nome do serviço <span class="req">*</span></label>
+      <input type="text" id="inputTitulo" placeholder="Ex: Manutenção elétrica residencial" />
+    </div>
+
+    <div class="field">
+      <label>Categoria <span class="req">*</span></label>
+      <!--<select>
+        <option value="" disabled selected>Selecione uma categoria</option>
+        <option>Manutenção &amp; Reparos</option>
+        <option>TI &amp; Suporte</option>
+        <option>Saúde &amp; Bem-estar</option>
+        <option>Educação</option>
+        <option>Limpeza &amp; Reforma</option>
+        <option>Consultoria</option>
+        <option>Logística &amp; Mudança</option>
+        <option>Outros</option>
+      </select>-->
+      <input type="text" id="inputCategoria" placeholder="Insira a categoria do serviço" />
+    </div>
+    <div class="field">
+      <label>Descrição <span class="req">*</span></label>
+      <textarea rows="4" id="inputDescricao" placeholder="Descreva o que está incluso no serviço e o que o cliente pode esperar..."></textarea>
+    </div>
+  </div>
+
+  <!-- PREÇO & LOCAL -->
+  <div class="card">
+    <div class="card-title"><i class="ti ti-currency-dollar"></i> Preço &amp; local</div>
+
+    <div class="row2">
+      <div class="field">
+        <label>Preço (R$) <span class="req">*</span></label>
+        <div class="prefix-row">
+          <span class="prefix">R$</span>
+          <input type="number" id="inputPreco" placeholder="0,00" min="0" style="flex:1" />
+        </div>
+      </div>
+      <div class="field">
+        <label>Tipo de cobrança <span class="req">*</span></label>
+        <select id="inputTipoCobranca">
+          <option value="" disabled selected>Selecione</option>
+          <option>Por hora</option>
+          <option>Por visita</option>
+          <option>Pacote fixo</option>
+          <option>A combinar</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Cidade de atendimento <span class="req">*</span></label>
+      <input type="text" id="inputCidade" placeholder="Ex: São Paulo, SP" />
+    </div>
+  </div>
+
+  <!-- CONTATO -->
+  <div class="card">
+    <div class="card-title"><i class="ti ti-phone"></i> Contato</div>
+
+    <div class="row2">
+      <div class="field">
+        <label>Telefone / WhatsApp <span class="req">*</span></label>
+        <input type="tel" id="inputTelefone" placeholder="(11) 99999-9999" />
+      </div>
+      <div class="field">
+        <label>E-mail</label>
+        <input type="text" id="inputEmail" placeholder="seu@email.com" />
+      </div>
+    </div>
+  </div>
+
+  <!-- FOTO -->
+  <div class="card">
+    <div class="card-title"><i class="ti ti-photo"></i> Foto do serviço (opcional)</div>
+    <div class="upload" onclick="document.getElementById('foto').click()">
+      <i class="ti ti-cloud-upload"></i>
+      <span>Clique para enviar uma foto</span>
+      <small>JPG ou PNG · máx. 5 MB</small>
+      <input type="file" id="foto" accept="image/*" style="display:none" />
+    </div>
+  </div>
+
+  <!-- AÇÕES -->
+  <div class="actions">
+    <button class="btn-sec" id="btnCancelar">Cancelar</button>
+    <button class="btn-pri" id="btnPublicar">
+      Publicar serviço <i class="ti ti-arrow-right" style="font-size:14px"></i>
+    </button>
+  </div>
+
+</div>
+<script src="servico.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Prestador</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="perfil-card">
+
+    <div class="perfil-topo">
+
+        <div class="perfil-foto">
+            <img src="imagens/user.png">
+        </div>
+
+        <div class="perfil-info">
+
+            <h1 id="nomePrestador">Carregando...</h1>
+
+            <p id="emailPrestador">
+                Carregando...
+            </p>
+
+            <span id="membroDesde">
+                📅 Membro desde...
+            </span>
+
+        </div>
+
+    </div>
+
+    <button class="btn-editar">
+        Editar Perfil
+    </button>
+
+</div>
+
+<div class="cards-infos">
+
+    <div class="info-card">
+        <h2 id="qtdServicos">0</h2>
+        <p>Serviços</p>
+    </div>
+
+    <div class="info-card">
+        <h2 id="precoHora">R$ 0,00</h2>
+        <p>Por hora</p>
+    </div>
+
+    <div class="info-card">
+        <h2 id="experienciaPrestador">0 anos</h2>
+        <p>Experiência</p>
+    </div>
+
+</div>
+
+<div class="descricao-card">
+
+    <h2>Sobre mim</h2>
+
+    <p id="descricaoPrestador">
+        Nenhuma descrição cadastrada.
+    </p>
+
+</div>
+
+<div class="servicos-card">
+
+    <h2>Meus Serviços</h2>
+
+    <div
+        class="lista-servicos"
+        id="listaServicos"
+    >
+
+        <p>Carregando serviços...</p>
+
+    </div>
+
+</div>
+
+<div class="acoes">
+
+    <button id="btnCadastrarServico">
+        + Cadastrar Serviço
+    </button>
+
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
