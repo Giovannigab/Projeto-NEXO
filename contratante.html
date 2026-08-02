@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contratante.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="icon" type="image/x-icon" href="logos/X.png">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Nexo - Área do Contratante</title>
+</head>
+<body>
+
+    <div id="navbar"></div>
+    <script src="navbar.js"></script>
+
+    <!-- Sidebar -->
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="logos/X.png" alt="Nexo" width="32" onerror="this.style.display='none'">
+                <span class="logo-text">Nexo</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-section="inicio" onclick="mostrarSecao('inicio', this)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+                    Início
+                </a>
+                <a href="#" class="nav-item" data-section="buscar" onclick="mostrarSecao('buscar', this)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    Buscar prestadores
+                </a>
+                <a href="#" class="nav-item" data-section="solicitacoes" onclick="mostrarSecao('solicitacoes', this)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/></svg>
+                    Minhas solicitações
+                    <span class="badge-nav" id="badge-solic">2</span>
+                </a>
+                <a href="#" class="nav-item" data-section="mensagens" onclick="mostrarSecao('mensagens', this)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    Mensagens
+                    <span class="badge-nav" id="badge-msg">1</span>
+                </a>
+                <a href="#" class="nav-item" data-section="perfil" onclick="mostrarSecao('perfil', this)">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    Meu perfil
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="cadastro.html" class="nav-item sair">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16,17 21,12 16,7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                    Sair
+                </a>
+            </div>
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main class="main-content">
+
+            <!-- Topbar -->
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="menu-mobile" onclick="toggleSidebar()">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                    </button>
+                    <h1 class="topbar-titulo" id="topbar-titulo">Início</h1>
+                </div>
+                <div class="topbar-right">
+                    <button class="icon-btn notif-btn" onclick="toggleNotif()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                        <span class="notif-dot"></span>
+                    </button>
+                    <div class="avatar-topbar" id="avatar-inicial">J</div>
+                </div>
+            </header>
+
+            <!-- SEÇÃO: INÍCIO -->
+            <section class="secao active" id="sec-inicio">
+                <div class="boas-vindas-banner">
+                    <div class="boas-vindas-texto">
+                        <h2 id="saudacao">Bem-vindo de volta!</h2>
+                        <p>O que você precisa resolver hoje?</p>
+                    </div>
+                    <button class="button-acesso btn-solicitar" onclick="mostrarSecao('buscar', document.querySelector('[data-section=buscar]'))">
+                        + Solicitar serviço
+                    </button>
+                </div>
+
+                <!-- Cards de métricas -->
+                <div class="metricas-grid">
+                    <div class="metrica-card">
+                        <div class="metrica-icone azul">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+                        </div>
+                        <div class="metrica-info">
+                            <span class="metrica-valor">3</span>
+                            <span class="metrica-label">Solicitações feitas</span>
+                        </div>
+                    </div>
+                    <div class="metrica-card">
+                        <div class="metrica-icone verde">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20,6 9,17 4,12"/></svg>
+                        </div>
+                        <div class="metrica-info">
+                            <span class="metrica-valor">1</span>
+                            <span class="metrica-label">Serviços concluídos</span>
+                        </div>
+                    </div>
+                    <div class="metrica-card">
+                        <div class="metrica-icone amarelo">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+                        </div>
+                        <div class="metrica-info">
+                            <span class="metrica-valor">2</span>
+                            <span class="metrica-label">Em andamento</span>
+                        </div>
+                    </div>
+                    <div class="metrica-card">
+                        <div class="metrica-icone roxo">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <div class="metrica-info">
+                            <span class="metrica-valor">1</span>
+                            <span class="metrica-label">Mensagens novas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categorias de serviço -->
+                <div class="secao-titulo">
+                    <h3>Categorias populares</h3>
+                    <p>Selecione uma área para encontrar prestadores próximos</p>
+                </div>
+                <div class="categorias-grid">
+                    <button class="categoria-card" onclick="selecionarCategoria('Elétrica')">
+                        <div class="cat-icone">💡</div>
+                        <span>Elétrica</span>
+                    </button>
+                    <button class="categoria-card" onclick="selecionarCategoria('Hidráulica')">
+                        <div class="cat-icone">🔧</div>
+                        <span>Hidráulica</span>
+                    </button>
+                    <button class="categoria-card" onclick="selecionarCategoria('Pintura')">
+                        <div class="cat-icone">🎨</div>
+                        <span>Pintura</span>
+                    </button>
+                    <button class="categoria-card" onclick="selecionarCategoria('Ar-condicionado')">
+                        <div class="cat-icone">❄️</div>
+                        <span>Ar-condicionado</span>
+                    </button>
+                    <button class="categoria-card" onclick="selecionarCategoria('Limpeza')">
+                        <div class="cat-icone">🧹</div>
+                        <span>Limpeza</span>
+                    </button>
+                    <button class="categoria-card" onclick="selecionarCategoria('Reformas')">
+                        <div class="cat-icone">🏗️</div>
+                        <span>Reformas</span>
+                    </button>
+                    <button class="categoria-card" onclick="selecionarCategoria('Informática')">
+                        <div class="cat-icone">💻</div>
+                        <span>Informática</span>
+                    </button>
+                    <button class="categoria-card" onclick="selecionarCategoria('Jardinagem')">
+                        <div class="cat-icone">🌿</div>
+                        <span>Jardinagem</span>
+                    </button>
+                </div>
+
+                <!-- Atividade recente -->
+                <div class="secao-titulo">
+                    <h3>Atividade recente</h3>
+                </div>
+                <div class="atividade-lista">
+                    <div class="atividade-item">
+                        <div class="atividade-avatar azul">MA</div>
+                        <div class="atividade-info">
+                            <strong>Marcos Almeida</strong> respondeu sua solicitação de <em>Elétrica</em>
+                            <span class="atividade-tempo">Há 2 horas</span>
+                        </div>
+                        <span class="status-tag aceito">Aceito</span>
+                    </div>
+                    <div class="atividade-item">
+                        <div class="atividade-avatar cinza">CF</div>
+                        <div class="atividade-info">
+                            <strong>Carlos Ferreira</strong> recebeu sua solicitação de <em>Hidráulica</em>
+                            <span class="atividade-tempo">Ontem</span>
+                        </div>
+                        <span class="status-tag pendente">Aguardando</span>
+                    </div>
+                    <div class="atividade-item">
+                        <div class="atividade-avatar verde">PO</div>
+                        <div class="atividade-info">
+                            <strong>Pedro Oliveira</strong> concluiu o serviço de <em>Pintura</em>
+                            <span class="atividade-tempo">Há 3 dias</span>
+                        </div>
+                        <span class="status-tag concluido">Concluído</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO: BUSCAR PRESTADORES -->
+            <section class="secao" id="sec-buscar">
+                <div class="busca-header">
+                    <div class="campo busca-campo">
+                        <input type="text" id="input-busca" placeholder="Buscar por serviço ou prestador..." class="input-busca">
+                    </div>
+                    <div class="campo">
+                        <select id="filtro-categoria" class="input-busca">
+                            <option value="">Todas as categorias</option>
+                            <option value="Elétrica">Elétrica</option>
+                            <option value="Hidráulica">Hidráulica</option>
+                            <option value="Pintura">Pintura</option>
+                            <option value="Ar-condicionado">Ar-condicionado</option>
+                            <option value="Limpeza">Limpeza</option>
+                            <option value="Reformas">Reformas</option>
+                            <option value="Informática">Informática</option>
+                            <option value="Jardinagem">Jardinagem</option>
+                        </select>
+                    </div>
+                    <button class="button-acesso" onclick="filtrarPrestadores()">Buscar</button>
+                </div>
+
+                <p class="resultado-busca" id="resultado-busca">Mostrando prestadores próximos a você</p>
+
+                <div class="prestadores-grid" id="prestadores-grid">
+                    <!-- Preenchido pelo JS -->
+                </div>
+            </section>
+
+            <!-- SEÇÃO: MINHAS SOLICITAÇÕES -->
+            <section class="secao" id="sec-solicitacoes">
+                <div class="filtros-status">
+                    <button class="filtro-btn ativo" onclick="filtrarStatus('todos', this)">Todos</button>
+                    <button class="filtro-btn" onclick="filtrarStatus('pendente', this)">Aguardando</button>
+                    <button class="filtro-btn" onclick="filtrarStatus('aceito', this)">Aceitos</button>
+                    <button class="filtro-btn" onclick="filtrarStatus('concluido', this)">Concluídos</button>
+                </div>
+
+                <div class="solicitacoes-lista" id="solicitacoes-lista">
+                    <!-- Preenchido pelo JS -->
+                </div>
+            </section>
+
+            <!-- SEÇÃO: MENSAGENS -->
+            <section class="secao" id="sec-mensagens">
+                <div class="chat-layout">
+                    <div class="chat-lista" id="chat-lista">
+                        <!-- Preenchido pelo JS -->
+                    </div>
+                    <div class="chat-janela" id="chat-janela">
+                        <div class="chat-vazio">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            <p>Selecione uma conversa para visualizar as mensagens</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO: MEU PERFIL -->
+            <section class="secao" id="sec-perfil">
+                <div class="perfil-container">
+                    <div class="perfil-card">
+                        <div class="perfil-avatar" id="perfil-avatar">J</div>
+                        <div class="perfil-dados">
+                            <h2 id="perfil-nome">João Silva</h2>
+                            <p id="perfil-email" class="perfil-email">joao@email.com</p>
+                            <span class="status-tag aceito">Conta verificada</span>
+                        </div>
+                        <button class="button-acesso btn-editar">Editar perfil</button>
+                    </div>
+
+                    <div class="perfil-secoes">
+                        <div class="perfil-bloco">
+                            <h3>Informações pessoais</h3>
+                            <div class="campo">
+                                <label>Nome completo</label>
+                                <input type="text" id="campo-nome" value="João Silva">
+                            </div>
+                            <div class="campo">
+                                <label>E-mail</label>
+                                <input type="email" id="campo-email" value="joao@email.com">
+                            </div>
+                            <div class="campo">
+                                <label>Telefone</label>
+                                <input type="text" placeholder="(11) 99999-9999">
+                            </div>
+                            <div class="campo">
+                                <label>CEP</label>
+                                <input type="text" placeholder="01310-100">
+                            </div>
+                        </div>
+
+                        <div class="perfil-bloco">
+                            <h3>Segurança</h3>
+                            <div class="campo">
+                                <label>Senha atual</label>
+                                <input type="password" placeholder="••••••••">
+                            </div>
+                            <div class="campo">
+                                <label>Nova senha</label>
+                                <input type="password" placeholder="••••••••">
+                            </div>
+                            <button class="button-acesso">Salvar alterações</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Modal: Solicitar Serviço -->
+    <div class="modal-overlay" id="modal-solicitar" style="display:none">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modal-titulo">Solicitar serviço</h3>
+                <button class="modal-fechar" onclick="fecharModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="prestador-selecionado" id="prestador-selecionado" style="display:none">
+                    <div class="atividade-avatar azul" id="modal-avatar">MA</div>
+                    <div>
+                        <strong id="modal-prestador-nome">Marcos Almeida</strong>
+                        <p id="modal-prestador-cat" style="font-size:13px;color:#666;margin:2px 0 0">Eletricista</p>
+                    </div>
+                </div>
+                <div class="campo">
+                    <label>Descrição do serviço</label>
+                    <textarea placeholder="Descreva o que precisa ser feito..." rows="4"></textarea>
+                </div>
+                <div class="campo">
+                    <label>Data desejada</label>
+                    <input type="date">
+                </div>
+                <div class="campo">
+                    <label>Endereço do serviço</label>
+                    <input type="text" placeholder="Rua, número, bairro, CEP">
+                </div>
+                <div class="aviso-privacidade">
+                    🔒 Seu endereço exato só é compartilhado com o prestador após confirmação do serviço.
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancelar" onclick="fecharModal()">Cancelar</button>
+                <button class="button-acesso" onclick="enviarSolicitacao()">Enviar solicitação</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="contratante.js"></script>
+</body>
+</html>
