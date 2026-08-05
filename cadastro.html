@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="cadastro.css"> <!-- Folha de estilo da página -->
-    <link rel="stylesheet" href="navbar.css"> <!-- Folha de estilo da Navbar -->
     <link rel="icon" type="image/x-icon" href="logos\X.png"> <!-- Ícone da página -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <!-- Fonte Quicksand -->
     <title>Nexo - Cadastro</title>
 </head>
 <body>
     <div id="navbar"></div> <!-- Div para a Navbar -->
-    <script src="navbar.js"></script> <!-- Script da Navbar -->
+    <script src="cadastro.js"></script> <!-- Script do cadastro -->
 
     <section id="cadastro" class="section">
         <div class="cadastro-container">
@@ -28,7 +27,7 @@
                 <div class="opcoes-conta">
                     <button type="button" class="opcao-conta ativo" data-tipo="cliente" onclick="selecionarTipo('cliente')">
                         <div class="opcao-icone">
-                            <img src="icones\cliente.png" alt="Cliente" width="40px">
+                            <img src="icones/ICONclienteCadastro.png" alt="Cliente" width="40px">
                         </div>
                         <div class="opcao-txt">
                             <h4>Cliente / Contratante</h4>
@@ -38,7 +37,7 @@
 
                     <button type="button" class="opcao-conta" data-tipo="prestador" onclick="selecionarTipo('prestador')">
                         <div class="opcao-icone">
-                            <img src="icones\engrenagem.png" alt="Prestador" width="40px">
+                            <img src="icones\ICONprestadorCadastro.jpg" alt="Prestador" width="40px">
                         </div>
                         <div class="opcao-txt">
                             <h4>Prestador de serviço</h4>
@@ -182,21 +181,6 @@
             </div>
         </div>
     </section>
-
-    <script>
-        function selecionarTipo(tipo) {
-            // Atualiza botões de seleção
-            document.querySelectorAll('.opcao-conta').forEach(function (btn) {
-                btn.classList.toggle('ativo', btn.dataset.tipo === tipo);
-            });
-
-            // Atualiza formulário exibido
-            document.querySelectorAll('.form-cadastro').forEach(function (form) {
-                form.classList.remove('ativo');
-            });
-            document.getElementById('form-' + tipo).classList.add('ativo');
-        }
-    </script>
-
+    <script src="cadastro.js"></script> <!-- Script do cadastro -->
 </body>
 </html>

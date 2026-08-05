@@ -132,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .button-acesso:hover {
     background-color: #12345a;
-    cursor: not-allowed;
+    cursor: pointer;
 }
 
 /* Cartas */
